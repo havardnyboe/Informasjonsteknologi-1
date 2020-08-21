@@ -1,0 +1,31 @@
+body {
+    background: #232323;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    text-align: left;
+}
+
+a {
+    color: rgb(255, 136, 0);
+    text-decoration: none;
+}
+
+#imgText {
+    color: #808080;
+    margin: 0;
+}
+
+a:hover {
+    background-color: #303030;
+    text-decoration: underline;
+}
+
+.main {
+    margin: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
