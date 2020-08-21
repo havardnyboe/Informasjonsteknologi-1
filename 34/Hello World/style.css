@@ -13,15 +13,15 @@ a {
     text-decoration: none;
 }
 
-#imgText {
-    color: #808080;
-    margin: 0;
-    font-size: 0.9rem;
-}
 
 a:hover {
     background-color: #303030;
     text-decoration: underline;
+}
+
+.responsive {
+    width: 100%;
+    height: auto:
 }
 
 .main {
@@ -29,4 +29,10 @@ a:hover {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
+}
+
+#imgText {
+    color: #808080;
+    margin: 0;
+    font-size: 0.9rem;
 }
