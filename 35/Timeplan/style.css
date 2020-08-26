@@ -4,6 +4,13 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+main {
+    margin: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
 h1 {
     text-align: left;
 }
@@ -12,7 +19,6 @@ a {
     color: rgb(255, 136, 0);
     text-decoration: underline dotted;
 }
-
 
 a:hover {
     background-color: #303030;
@@ -29,11 +35,12 @@ figcaption {
     font-size: 0.9rem;
 }
 
-main {
-    margin: 30%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
+li {
+    line-height: 1.6rem;
+}
+
+img {
+    width: 100%;
 }
 
 table {
@@ -44,11 +51,7 @@ table {
 table,
 th,
 td {
-    border: 1px solid whitesmoke;
+    border: 2px solid whitesmoke;
     padding: 10px;
     text-align: center;
-}
-
-li {
-    line-height: 1.6rem;
 }
