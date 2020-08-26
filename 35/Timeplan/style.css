@@ -1,0 +1,54 @@
+body {
+    background: #232323;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    text-align: left;
+}
+
+a {
+    color: rgb(255, 136, 0);
+    text-decoration: underline dotted;
+}
+
+
+a:hover {
+    background-color: #303030;
+    text-decoration: underline;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    color: #808080;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+main {
+    margin: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    text-align: center;
+}
+
+li {
+    line-height: 1.6rem;
+}
