@@ -3,12 +3,18 @@
 body {
     background: #232323;
     color: whitesmoke;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1rem;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    text-align: left;
+main {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    height: 100vh;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -16,10 +22,12 @@ a {
     text-decoration: underline dotted;
 }
 
-
 a:hover {
-    background-color: #303030;
+    color: whitesmoke;
+    background-color: rgb(255, 136, 0);
     text-decoration: underline;
+    transition: ease-out;
+    transition-duration: .3s;
 }
 
 figure {
@@ -32,9 +40,7 @@ figcaption {
     font-size: 0.9rem;
 }
 
-main {
-    margin: 30%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
+.content {
+    min-width: 500px;
+    max-width: 35vw;
 }
