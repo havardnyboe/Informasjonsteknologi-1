@@ -9,6 +9,7 @@ body {
 
 h1 {
     text-align: left;
+    font-size: 2.5rem;
 }
 
 a {
@@ -18,8 +19,12 @@ a {
 
 
 a:hover {
-    background-color: #303030;
+    color: whitesmoke;
+    /* background-color: #303030; */
+    background-color: rgb(255, 136, 0);
     text-decoration: underline;
+    transition: ease-out;
+    transition-duration: .3s;
 }
 
 figure {
@@ -37,4 +42,15 @@ main {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px;
+}
+
+.sitat {
+    padding: 0rem 2.5rem;
+    line-height: 1.25rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.1rem;
+}
+
+li {
+    padding: .75rem 0rem;
 }
