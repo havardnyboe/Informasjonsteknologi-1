@@ -5,6 +5,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    height: 100vh;
 }
 
 nav {
@@ -31,7 +32,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: whitesmoke;
+    background-color: rgb(221, 221, 221);
 }
 
 main {
@@ -86,7 +87,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     padding: 2rem 0rem;
-    background-color: whitesmoke;
+    align-items: center;
 }
 
 footer ul {
