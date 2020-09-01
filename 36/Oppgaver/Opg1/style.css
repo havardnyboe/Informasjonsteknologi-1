@@ -41,7 +41,9 @@ main {
     align-items: center;
 }
 
-h1 {
+h1,
+h2,
+h3 {
     padding: 1rem 0rem;
 }
 
@@ -51,6 +53,11 @@ p {
 
 img {
     width: 100%;
+}
+
+figcaption {
+    font-size: .75rem;
+    color: gray;
 }
 
 a {
@@ -63,6 +70,11 @@ a:hover {
     text-decoration: underline;
     transition: ease-out;
     transition-duration: .3s;
+}
+
+li {
+    line-height: 2rem;
+    list-style-position: inside;
 }
 
 article {
@@ -79,4 +91,8 @@ footer {
 
 footer ul {
     list-style: none;
+}
+
+.logo {
+    font-size: 1.2rem;
 }
