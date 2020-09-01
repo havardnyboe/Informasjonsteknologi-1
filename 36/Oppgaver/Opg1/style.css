@@ -11,7 +11,8 @@ body {
 nav {
     display: flex;
     justify-content: space-around;
-    padding: 1.5rem 0rem;
+    align-items: center;
+    padding: 1.2rem 0rem;
     background-color: white;
     position: fixed;
     top: 0;
@@ -37,7 +38,6 @@ nav ul li a:hover {
 
 main {
     display: flex;
-    padding: 5rem 0rem;
     flex-direction: column;
     align-items: center;
 }
@@ -46,6 +46,10 @@ h1,
 h2,
 h3 {
     padding: 1rem 0rem;
+}
+
+h1 {
+    padding-top: 5rem;
 }
 
 p {
@@ -73,14 +77,24 @@ a:hover {
     transition-duration: .3s;
 }
 
+table,
+td {
+    border: .1rem solid black;
+    border-collapse: collapse;
+    padding: .5rem .5rem;
+}
+
 li {
     line-height: 2rem;
     list-style-position: inside;
 }
 
 article {
-    cursor: pointer;
     width: 40vw;
+}
+
+.article {
+    cursor: pointer;
 }
 
 footer {
@@ -96,4 +110,16 @@ footer ul {
 
 .logo {
     font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    article {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    article {
+        width: 94vw;
+    }
 }
