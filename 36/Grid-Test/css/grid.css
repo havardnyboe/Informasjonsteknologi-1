@@ -1,0 +1,25 @@
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 70% auto;
+}
+
+.grid-banner {
+    /* text-align: center; */
+    padding: 1.5rem 0rem;
+    grid-column: 1/-1;
+    /* border: 2px solid black; */
+}
+
+.grid-whitespace {
+    /* text-align: center; */
+    /* padding: 3rem 0rem; */
+    /* font-size: 3rem; */
+    /* border-left: 2px solid black; */
+    /* border-right: 2px solid black; */
+}
+
+.grid-content {
+    padding: 2rem;
+    line-height: 1.75rem;
+}
