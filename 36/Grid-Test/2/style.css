@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 6rem auto 8rem;
+    grid-template-areas:
+        "header  header  header"
+        ".       section .     "
+        "footer  footer  footer";
+}
+
+.header-nav {
+    grid-area: header;
+    background: rgb(56, 56, 56);
+}
+
+.section-main {
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+    background: black;
+}
+
+@media only screen and (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 6rem auto 8rem;
+        grid-template-areas:
+            "header  "
+            "section "
+            "footer  ";
+
+    }
+}
+
+
+
+h1 {
+    padding: 1.5rem 0rem;
+}
