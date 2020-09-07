@@ -4,11 +4,17 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html,
+body {
+    height: 100vh;
+}
 
 .grid-container {
+    height: 100vh;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 6rem auto 8rem;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "header  header  header"
         ".       section .     "
@@ -17,7 +23,45 @@
 
 .header-nav {
     grid-area: header;
-    background: rgb(56, 56, 56);
+    background-color: rgba(210, 215, 250, 1);
+}
+
+.nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". nav-content .";
+}
+
+.nav-content {
+    grid-area: nav-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    height: 4.5rem;
+}
+
+.nav-content ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-content ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 4rem 2.25rem;
+}
+
+.nav-content ul li a:hover {
+    text-decoration: underline;
+    color: black;
+    background-color: rgb(219, 224, 255);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .section-main {
@@ -26,23 +70,42 @@
 
 footer {
     grid-area: footer;
-    background: black;
+    background-color: black;
+    color: whitesmoke;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (max-width: 767px) {
     .grid-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 6rem auto 8rem;
+        grid-template-rows: auto 1fr auto;
         grid-template-areas:
             "header  "
             "section "
             "footer  ";
-
     }
+
+    .nav-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: "nav-content";
+    }
+
+    h1,
+    p,
+    span {
+        margin: 0 1rem;
+    }
+
 }
-
-
 
 h1 {
     padding: 1.5rem 0rem;
+}
+
+p {
+    margin-bottom: 2rem;
+
 }
