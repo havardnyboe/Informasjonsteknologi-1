@@ -2,9 +2,9 @@
 Oppgaver og prøver fra IT1
  
 ## Innhold
-- [Hello World!](./34/Hello%20World/)
-- Timeplan
-- Universell Utforming
-- Nettside eksempel - Matblogg
-- Grid-Test
-- Periodesystemet
+- [Hello World!](34/Hello%20World/)
+- [Timeplan](35/Timeplan/)
+- [Universell Utforming](35/Universell%20Utforming/)
+- [Nettside eksempel - Matblogg](36/Oppgaver/Opg1/)
+- [Grid-Test](36/Grid-Test/)
+- [Periodesystemet](37/Periodesystemet/)
