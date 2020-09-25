@@ -1,0 +1,110 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #436ba7;
+}
+
+main {
+    width: 80vw;
+    margin: 3rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, fr);
+    grid-template-areas:
+        "klasserom  timeplan"
+        "lærere     timeplan"
+        "info       merInfo";
+    column-gap: 4rem;
+}
+
+#klasserom {
+    grid-area: klasserom;
+}
+
+#lærere {
+    grid-area: lærere;
+}
+
+#info {
+    grid-area: info;
+}
+
+#merInfo {
+    grid-area: merInfo;
+}
+
+#timeplan {
+    grid-area: timeplan;
+}
+
+section {
+    border: 1px solid black;
+    padding: 1.5rem 2rem;
+    background-color: white;
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #436ba7;
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    background-color: rgb(223, 223, 223);
+    text-decoration: underline;
+}
+
+figure {
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+figcaption {
+    color: #808080;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+li {
+    line-height: 1.6rem;
+}
+
+img {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+
+th {
+    background-color: wheat;
+}
+
+table,
+th,
+td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(5) {
+    background-color: rgb(216, 216, 216);
+}
