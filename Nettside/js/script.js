@@ -3,9 +3,9 @@ const images = ['cat1', 'cat2', 'cat3', 'dance1', 'dance2', 'dance3', 'dog1', 's
 
 function randImg() {
     let i = Math.trunc(Math.random()*images.length)
-    gif.innerHTML = `<img src="./Nettside/img/${images[i]}.gif" height="400" alt="cat">`
+    gif.innerHTML = `<img src="./Nettside/img/${images[i]}.gif" height="400" alt="tilfeldig valgt gif">`
 }
 
 window.onload = randImg
-document.querySelector('#gif-button').onclick = randImg
+document.querySelector('#gif').onclick = randImg
 document.querySelector('#gif-button-nav').onclick = randImg

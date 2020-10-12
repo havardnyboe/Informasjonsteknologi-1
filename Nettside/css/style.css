@@ -39,7 +39,8 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: white;
-    padding: 50px;
+    padding: 25px 50px;
+    overflow: hidden;
 }
 
 nav a:hover {
@@ -69,6 +70,10 @@ section {
     align-items: center;
 }
 
+#gif {
+    cursor: pointer;
+}
+
 footer {
     grid-area: footer;
     background-color: #101010;
@@ -96,13 +101,16 @@ button:active, #button:active {
 @media only screen and (max-width: 767px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: 7vh 79vh 14vh;
+        grid-template-rows: 1fr 6fr 2fr;
         grid-template-areas: 
         "header" 
         "main"
         "footer";
     }
     nav {
-        grid-area: footer;
+        /* grid-area: footer; */
+        flex-direction: column;
+        height: 9rem;
     }
+    
 }
