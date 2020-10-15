@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+
+<body>
+    <main>
+        <section class="form">
+            <form>
+                <fieldset>
+                    <legend>Person info:</legend>
+                    <input class="input-text" type="text" placeholder="Fornavn">
+                    <input class="input-text" type="text" placeholder="Etternavn">
+                    <input class="input-text" type="date">
+                </fieldset>
+                <fieldset>
+                    <legend>Programområde:</legend>
+                    <input type="radio" name="porgram" id="studieReal"> <label for="stude">Realfag</label>
+                    <br>
+                    <input type="radio" name="porgram" id="studieSamf"> <label for="stude">Språk, samfunnsfag og
+                        økonomi</label>
+                    <br>
+                    <input type="radio" name="porgram" id="idrett"> <label for="idrett">Idrettsfag</label> <br>
+                    <input type="radio" name="porgram" id="mk"> <label for="mk">Medier og Kommunikasjon</label> <br>
+                    <input type="radio" name="porgram" id="kda"> <label for="kda">Kunst, Design og Arkitektur</label>
+                    <br>
+                    <input type="radio" name="porgram" id="mdd"> <label for="mdd">Musikk, Dans og Drama</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Programfag:</legend>
+                    <input type="checkbox" id="bio"> <label for="bio">Biologi 2</label> <br>
+                    <input type="checkbox" id="fys"> <label for="fys">Fysikk 2</label> <br>
+                    <input type="checkbox" id="matS2"> <label for="matS2">Matematikk S2</label> <br>
+                    <input type="checkbox" id="matR2"> <label for="matR2">Matematikk R2</label> <br>
+                    <input type="checkbox" id="it1"> <label for="it1">Informasjonsteknologi 1</label> <br>
+                    <input type="checkbox" id="it2"> <label for="it2">Informasjonsteknologi 2</label> <br>
+                    <input type="checkbox" id="progMod"> <label for="progMod">Programmering og Modellering X</label>
+                    <br>
+                    <input type="checkbox" id="psyk"> <label for="">Psykologi 2</label> <br>
+                    <input type="checkbox" id="samfØk"> <label for="">Samfunnsøkonomi 2</label> <br>
+                    <input type="checkbox" id="retts"> <label for="">Rettslære 2</label> <br>
+                    <input type="checkbox" id="hisFi"> <label for="">Historie og Filosofi 2</label> <br>
+                </fieldset>
+                <input type="submit" value="Send inn">
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+
+    </main>
+</body>
+
+</html>
