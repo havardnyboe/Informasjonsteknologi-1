@@ -2,20 +2,165 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    color: #1e1e1e;
 }
 
 .logo {
-    width: 200px;
+    width: 300px;
     height: auto;
+}
+
+body {
+    background-color: #F4F2E6;
+    font-size: large;
+}
+
+header {
+    background-color: white;
 }
 
 nav.header-nav {
     display: flex;
-    justify-content: space-between;
-    border: 2px solid black;
-    border-radius: 8px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
     margin: .75rem auto auto auto;
-    padding: .5rem .5rem;
-    width: 60vw;
+    padding-top: 2rem;
+    width: 96vw;
+    
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1.75rem 0;
+    width: 100%;
+    list-style: none;
+    height: 22rem;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    width: 16rem;
+    height: 4rem;
+    background-color: #F4F2E6;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+nav ul li:hover {
+    background-color: bisque;
+    transition-duration: 700ms;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem 58px;
+    font-size: 1.25rem;
+    
+}
+
+/* nav ul li a:hover {
+} */
+
+main {
+    background-color: white;
+}
+
+section {
+    padding: 1rem 0;
+    border-radius: 10px;
+    width: 96%; 
+    margin: 1rem auto; 
+    padding-bottom: 3rem;
+}
+
+li {
+    list-style-position: inside;
+    padding-left: 4rem;
+    text-indent: -1.2rem;
+    margin-top: 1.5rem;
+}
+
+ul {
+    margin-bottom: 3rem;
+}
+
+h1, h2, h3, p {
+    margin: 1.5rem 1rem;
+}
+
+.title-heading {
+    margin: 0.2rem 1rem;
+    font-weight: 600;
+}
+
+.author-heading {
+    margin: 0.2rem 1rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+footer {
+    background-color: #CFEBF3;
+    padding-top: 1rem;
+}
+
+@media only screen and (min-width: 1025px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 20rem auto 20rem;
+        width: 80vw;
+        margin-bottom: 1rem;
+    }
+
+    nav.header-nav {
+        grid-column: 2/3;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 10rem;
+        padding-top: 0;
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 35vw;
+    }
+
+    main {
+        display: grid;
+        width: 80vw;
+        grid-template-columns: 20rem 4fr 4fr 20rem;
+    }
+
+    #bib-kan-tilby {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    
+    #bib-finner-du {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    #anbefaling {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
 
 }
