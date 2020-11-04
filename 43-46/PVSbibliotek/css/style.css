@@ -1,8 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Varela Round', sans-serif;
     color: #1e1e1e;
+    line-height: 1.5rem;
+    font-weight: 100;
 }
 
 .logo {
@@ -66,6 +69,21 @@ main {
     background-color: white;
 }
 
+figcaption span,
+figcaption a {
+    font-style: italic;
+    color: #5c5c5c;
+    font-size: .9rem;
+}
+
+figure {
+    margin: 0 1rem;
+}
+
+figure img {
+    margin: 0;
+}
+
 section {
     padding: 1rem 0;
     border-radius: 10px;
@@ -88,6 +106,10 @@ section#form fieldset {
     padding: 1rem;
 }
 
+section#video iframe {
+    width: 100%;
+}
+
 ul.p-list li {
     list-style-position: inside;
     padding-left: 2rem;
@@ -99,50 +121,60 @@ input,
 button {
     margin-bottom: 1rem;
     width: 10rem;
+    border-radius: 10px;
+    padding: .25rem;
 }
 
 h1,
 h2,
 h3,
-h4,
 p {
     margin: 1.5rem 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
 }
 
 .title-heading {
     margin: 0.2rem 1rem;
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .author-heading {
     margin: 0.2rem 1rem;
     font-weight: 500;
     font-style: italic;
+    font-size: 1rem;
+}
+
+img {
+    margin: 0 1rem;
+    width: 100%;
 }
 
 footer {
     background-color: #CFEBF3;
     padding-top: 1rem;
     width: 100%;
+    padding-bottom: 2rem;
 }
 
-.social-bubbles a {
-    display: inline-block;
-    background-color: rgb(159, 213, 228);
-    border-radius: 100%;
-    padding: .75rem;
-    width: 30px;
-    height: 30px;
+.footer-container {
+    margin: auto;
+    width: 96vw;
+    text-align: center;
 }
 
-.social-bubbles a img {
-    width: 30px;
+footer h3 {
+    margin: 1rem 0;
 }
 
-.licence,
-.licence a {
-    font-size: .5rem;
-    color: rgb(159, 209, 223);
+footer ul {
+    list-style: none;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -204,7 +236,7 @@ footer {
         display: grid;
         width: 1025px;
         grid-template-columns: 8rem 4fr 4fr 8rem;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1.8fr 1.3fr 1.25fr;
     }
 
     section {
@@ -225,18 +257,39 @@ footer {
         margin: 1.5rem 0;
     }
 
+    figure {
+        margin: 0;
+    }
+
+    img {
+        margin: 0;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;
+        margin: 3rem 0;
+    }
+
+    .title-heading {
+        margin: 0.2rem 0;
+    }
+
+    .author-heading {
+        margin: 0.2rem 0;
+    }
+
     ul.p-list li {
         padding-left: 1.5rem;
         text-indent: -1rem;
     }
 
-    #anbefaling {
+    /* #anbefaling {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
         height: 1rem;
-    }
+    } */
 
     #anbefaling h1 {
         width: 100%;
@@ -246,18 +299,45 @@ footer {
         width: 50%;
     }
 
+    #home-image {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+
     #bib-kan-tilby {
         grid-column: 3/4;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
 
     #bib-finner-du {
         grid-column: 2/3;
-        grid-row: 1/2;
+        grid-row: 2/3;
     }
 
     #anbefaling {
         grid-column: 2/4;
-        grid-row: 2/3;
+        grid-row: 3/4;
     }
+
+    #video {
+        margin-top: 5rem;
+        grid-column: 2/4;
+        grid-row: 1/3;
+    }
+
+    .footer-container {
+        width: 1025px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .footer-social,
+    .footer-adress,
+    .footer-contact {
+        display: inline-block;
+        width: 100px;
+    }
+
 }
