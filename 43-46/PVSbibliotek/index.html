@@ -11,11 +11,11 @@
     <title>Hjem - Porsgrunn Vgs Bibliotek</title>
 </head>
 
-<script>
+<!-- <script>
     alert(
         "NB! \nDETTE ER IKKE DEN OFFISIELLE SIDEN TIL PORSGRUNN VGS BIBLIOTEK!!!"
     )
-</script>
+</script> -->
 
 <body>
     <!-- Header med navigering -->
@@ -23,9 +23,9 @@
         <nav class="header-nav"><a href="index.html"><img class="logo" src="./img/porsgrunn-vgs.png"
                     alt="porsgrunn-vgs"></a>
             <ul>
-                <li><a href="../html/bok.html">Bøker</a></li>
-                <li><a href="../html/video.html">Video</a></li>
-                <li><a href="../html/omOss.html">Om Oss</a></li>
+                <li><a href="./html/bok.html">Bøker</a></li>
+                <li><a href="./html/skrivesenteret.html">Skrivesenteret</a></li>
+                <li><a href="./html/omSiden.html">Om Siden</a></li>
             </ul>
         </nav>
     </header>
@@ -35,10 +35,10 @@
             <h1 class="main-heading">Velkommen til biblioteket!</h1>
             <figure>
                 <img src="./img/susan-yin-2JIvboGLeho-unsplash.jpg" alt="bokhylle med bøker">
-                <figcaption><span>Foto: <a
-                            href="https://unsplash.com/@syinq?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Susan
-                            Yin</a> on <a
-                            href="https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+                <figcaption>
+                    <span>
+                        Foto: <a href="https://unsplash.com/@syinq?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="inline-link">Susan Yin</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="inline-link">Unsplash</a>
+                </span>
                 </figcaption>
             </figure>
         </section>
@@ -77,29 +77,34 @@
         <section id="anbefaling">
             <h1>Ukens anbefalinger</h1>
             <article id="book-recommendation">
-                <h2 class="title-heading">Boktittel</h2>
-                <h3 class="author-heading">Forfatter</h3>
-                <img src="./img/" alt="#">
-                <p>Lorem ipsum dolor,
-                    sit amet consectetur adipisicing elit. Vel consequuntur nihil totam dicta laborum
-                    quisquam impedit fugit voluptatibus deserunt minima necessitatibus atque dolorum dolore
-                    omnis assumenda ad,
-                    ipsum accusantium.</p>
+                <h2 class="title-heading">Ringenes Herre</h2>
+                <h3 class="author-heading">J. R. R. Tolkien, Allen & Unwin</h3>
+                <figure>
+                    <img src="./img/joba-khan-2YqJuzoYivA-unsplash.jpg" alt="Ringenes Herre Bok">
+                    <figcaption><span>Foto: <a href="https://unsplash.com/@joba27?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="inline-link">joba khan</a> on <a href="https://unsplash.com/s/photos/lord-of-the-rings?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" class="inline-link">Unsplash</a></span></figcaption>
+                </figure>
+                <p>Ringenes herre er et romanverk av J.R.R. Tolkien, utgitt 1954-55, i sjangeren fantastisk litteratur. Den er en oppfølger til Tolkiens første bok Hobbiten. <br><br>
+                    
+                Verket er sammensatt av seks «bøker». Tolkien ville opprinnelig publisere hele verket i ett bind, men etterkrigstidens papirmangel utelukket dette. I stedet ble historien delt opp i tre bind: Ringens brorskap (bok I og II), To tårn (bok III og IV), og Atter en konge (bok V og VI), samt seks tillegg og fire oversikter. Fordi de tre bøkene er så vidt distribuert, omtales ofte Ringenes herre som en trilogi. Dette er imidlertid teknisk ukorrekt, ettersom historien var skrevet og tenkt på som én bok, og de tre delene kan derfor ikke leses uavhengig av hverandre. - <a class="inline-link" href="https://no.wikipedia.org/wiki/Ringenes_herre">Wikipedia.org</a><br><br>
+            
+                Du kan låne hele bokserien på biblioteket, finn bøkene <a href="./html/bok.html" class="inline-link">her</a>
+            </p>
+
             </article>
             <article id="movie-recommendation">
                 <h2 class="title-heading">Den siste Fleksnes</h2>
                 <h3 class="author-heading">Bo Hermansson, EMI Produksjon & Norsk Film</h3>
                 <figure>
                     <img src="https://gfx.nrk.no/FLf4hm8rDVNNjlpTYe7pKQPQeuHssHE0L_JhJE1ae5Xw" alt="fleksnes">
-                    <figcaption><span>Foto: <a
-                                href="https://gfx.nrk.no/FLf4hm8rDVNNjlpTYe7pKQPQeuHssHE0L_JhJE1ae5Xw">NRK</a></span>
+                    <figcaption><span>Foto: <a href="https://gfx.nrk.no/FLf4hm8rDVNNjlpTYe7pKQPQeuHssHE0L_JhJE1ae5Xw" class="inline-link">NRK</a></span>
                     </figcaption>
                 </figure>
-                <p>Lorem ipsum dolor,
-                    sit amet consectetur adipisicing elit. Saepe quos ea voluptatibus ab maxime
-                    necessitatibus recusandae reiciendis minus dicta vitae natus dolores officia repellat
-                    sed,
-                    eos facilis dolor amet assumenda.</p>
+                <p>Marve Almar Fleksnes, spilt av Rolv Wesenlund, er en påståelig og egenrådig mann som jukser og drar en hvit løgn når han finner det hensiktsmessig. <br><br>
+
+                Norsk komedie fra 1974. Fleksnes er egentlig ganske fornøyd med tilværelsen. Han har en jobb og et brukbart sted å bo, men moder'n maser om barnebarn. Med Rolv Wesenlund, Aud Schønemann, Finn Mehlum, Per Christensen og Kjersti Døvigen. Regi: Bo Hermansson. - <a href="https://tv.nrk.no/serie/fleksnes" class="inline-link">nrk.no</a><br><br>
+
+                Du kan se hele filmen gratis på <a href="https://tv.nrk.no/program/FDRI41009695" class="inline-link">NRK</a> sine nettsider. OBS! Den er kun tilgjengelig fram til 11. november kl. 00:54!
+                </p>
             </article>
         </section>
     </main>
@@ -109,10 +114,10 @@
             <span id="footer-social">
                 <h3>Følg oss på:</h3>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Flickr</a></li>
+                    <li><a href="https://www.facebook.com/PorsgrunnVGS/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/porsgrunnvgs/">Instagram</a></li>
+                    <li><a href="https://twitter.com/PorsgrunnVGS">Twitter</a></li>
+                    <li><a href="https://www.flickr.com/photos/porvgs/albums">Flickr</a></li>
                 </ul>
             </span>
             <span id="footer-adress">
@@ -130,7 +135,7 @@
                     <li><a href="tel:35 91 75 00">35 91 75 00</a></li>
                 </ul>
                 <h3>Laget av:</h3>
-                <a href="../html/omOss.html">Håvard Solberg Nybøe</a>
+                <a href="./html/omSiden.html">Håvard Solberg Nybøe</a>
             </span>
         </div>
     </footer>

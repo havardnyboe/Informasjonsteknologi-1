@@ -1,0 +1,10 @@
+{
+    "spellright.language": [
+        "nb_NO"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
+}

@@ -4,7 +4,7 @@
     /* font-family: 'Open Sans', sans-serif; */
     font-family: 'Varela Round', sans-serif;
     color: #1e1e1e;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
     font-weight: 100;
 }
 
@@ -70,10 +70,11 @@ main {
 }
 
 figcaption span,
-figcaption a {
+figcaption a,
+.inline-link {
     font-style: italic;
     color: #5c5c5c;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 figure {
@@ -106,8 +107,10 @@ section#form fieldset {
     padding: 1rem;
 }
 
-section#video iframe {
+iframe {
     width: 100%;
+    height: 25rem;
+    border: none;
 }
 
 ul.p-list li {
@@ -136,6 +139,17 @@ h1,
 h2,
 h3 {
     font-weight: 600;
+}
+
+.main-heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+a.inline-link:hover {
+    text-decoration: dashed;
+    background-color: antiquewhite;
+    transition: .4s;
 }
 
 .title-heading {
@@ -236,18 +250,12 @@ footer ul {
         display: grid;
         width: 1025px;
         grid-template-columns: 8rem 4fr 4fr 8rem;
-        grid-template-rows: 1.8fr 1.3fr 1.25fr;
+        grid-template-rows: 1.3fr 1fr 1.9fr;
     }
 
     section {
         margin: 0;
         width: 100%;
-    }
-
-    section#form {
-        grid-column: 2/4;
-        grid-row: 1/3;
-        margin: 2rem 0;
     }
 
     h1,
@@ -263,6 +271,11 @@ footer ul {
 
     img {
         margin: 0;
+    }
+
+    #anbefaling figure img, 
+    p {
+        width: 92%;
     }
 
     .main-heading {
@@ -283,13 +296,17 @@ footer ul {
         text-indent: -1rem;
     }
 
-    /* #anbefaling {
+    .form-info {
+        text-align: center;
+    }
+
+    #anbefaling {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
         height: 1rem;
-    } */
+    }
 
     #anbefaling h1 {
         width: 100%;
@@ -319,10 +336,20 @@ footer ul {
         grid-row: 3/4;
     }
 
-    #video {
-        margin-top: 5rem;
+    #form {
         grid-column: 2/4;
-        grid-row: 1/3;
+        grid-row: 1/4;
+        margin: 2rem 0;
+    }
+
+    #skrivesenteret {
+        grid-column: 2/4;
+        grid-row: 1/4;
+    }
+
+    #omSiden {
+        grid-column: 2/4;
+        grid-row: 1/4;
     }
 
     .footer-container {

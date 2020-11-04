@@ -18,17 +18,23 @@
             <a href="../index.html"><img class="logo" src="../img/porsgrunn-vgs.png" alt="porsgrunn-vgs"></a>
             <ul>
                 <li><a href="../html/bok.html">Bøker</a></li>
-                <li><a href="../html/video.html">Video</a></li>
-                <li><a href="../html/omOss.html">Om Oss</a></li>
+                <li><a href="../html/skrivesenteret.html">Skrivesenteret</a></li>
+                <li><a href="../html/omSiden.html">Om Siden</a></li>
             </ul>
         </nav>
     </header>
     <!-- Main med hovedinnhold -->
     <main>
         <section id="form">
-            <h1>Utlånsskjema</h1>
+            <h1 class="main-heading">Utlån av bøker</h1>
+            <p class="form-info">
+                Bruk skjemaet til å finne bøker på biblioteket. <br><br>
+                For å låne en bok, skriv inn bruker id'en din <br> og søk etter boka du ønsker å låne. <br>
+                Velg start -og sluttdato for utlånsperioden <br> og send inn skremaet! Du vil kunne hente <br> boka på biblioteket etter 1 - 2 dager. <br><br>
+            </p>
             <form>
                 <fieldset>
+                    <legend>Utlånsskjema:</legend>
                     <input type="text" placeholder="Bruker Id">
 
                     <label for="bookSearch">Søk etter bok</label>
@@ -42,9 +48,9 @@
                     <br><button type="submit" onclick="alert('Skjema er send inn!')">Send inn</button>
                     <button type="reset">Reset</button>
                 </fieldset>
+                <br><br><br><br><br><br><br><br><br>
             </form>
         </section>
-
     </main>
     <!-- Footer med info og lenker -->
     <footer>
@@ -52,10 +58,10 @@
             <span id="footer-social">
                 <h3>Følg oss på:</h3>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Flickr</a></li>
+                    <li><a href="https://www.facebook.com/PorsgrunnVGS/">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/porsgrunnvgs/">Instagram</a></li>
+                    <li><a href="https://twitter.com/PorsgrunnVGS">Twitter</a></li>
+                    <li><a href="https://www.flickr.com/photos/porvgs/albums">Flickr</a></li>
                 </ul>
             </span>
             <span id="footer-adress">
@@ -73,7 +79,7 @@
                     <li><a href="tel:+35 91 75 00">35 91 75 00</a></li>
                 </ul>
                 <h3>Laget av:</h3>
-                <a href="../html/omOss.html">Håvard Solberg Nybøe</a>
+                <a href="../html/omSiden.html">Håvard Solberg Nybøe</a>
             </span>
         </div>
     </footer>
