@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 
 // Lager SQL-spørring og kjører denne
 // Legger data inn i databasen
-$sql = "INSERT INTO person(navn, kommentar) VALUES ('$navn', '$kommentar')";
+$sql = "INSERT INTO person(navn, kommentar) VALUES ('$navn)', '$kommentar')";
 if ($conn->query($sql) === TRUE) {
 echo "Data er lagt til! <br>";
 } else {
