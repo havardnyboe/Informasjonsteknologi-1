@@ -10,3 +10,5 @@ Oppgaver og prøver fra IT1
 - [Periodesystemet](2020/37/Periodesystemet/)
 - [Timeplan-2](2020/38/Timeplan-CSS)
 - [Timeplan-3](2020/39/Timeplan%3)
+- [PVSbibliotek](2020/43-46/PVSbibliotek/)
+- [Databasekoblingsting](2021/7/)
