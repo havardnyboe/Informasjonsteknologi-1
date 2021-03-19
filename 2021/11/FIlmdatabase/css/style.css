@@ -43,13 +43,14 @@ nav.menu-bar ul {
     align-items: center;
     height: 100%;
     list-style: none;
+    overflow: hidden;
 }
 
 nav.menu-bar ul li a {
     display: inline-block;
     color: inherit;
     text-decoration: none;
-    padding: 1.7rem 3rem;
+    padding: 10rem 3rem;
 }
 
 nav.menu-bar ul li a:hover {
