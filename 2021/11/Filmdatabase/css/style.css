@@ -5,10 +5,6 @@
 }
 
 body {
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-  align-content: space-between;
   background-color: #e3e2dd;
 }
 
@@ -17,7 +13,9 @@ span.logo a {
   text-decoration: none;
   padding: 1.7rem 2rem;
   font-size: 2.4rem;
-  font-family: "Passion One", cursive;
+  font-family: "Roboto", sans-serif;
+
+  font-weight: bolder;
 }
 
 header {
@@ -61,7 +59,7 @@ main {
   margin: auto;
   display: flex;
   width: 50%;
-  height: 100%;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   background-color: white;
@@ -69,12 +67,20 @@ main {
 
 section.card {
   width: 75%;
+  margin: 1.5rem 0;
   /* min-height: 30rem; */
+}
+
+section.card img {
+  float: left;
+  width: 250px;
+  padding-right: 30px;
 }
 
 .heading {
   font-family: "Roboto", sans-serif;
-  margin-top: 5rem;
+  font-size: 2.5rem;
+  padding-top: 2rem;
 }
 
 p {
@@ -83,6 +89,18 @@ p {
 
 footer {
   background-color: black;
+  color: white;
   width: 100%;
-  height: 18vh;
+  height: 14vh;
+}
+
+@media only screen and (max-width: 767px) {
+  nav.menu-bar {
+    height: 10rem;
+    flex-direction: column;
+  }
+
+  main {
+    width: 100%;
+  }
 }
