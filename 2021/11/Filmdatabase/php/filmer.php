@@ -13,40 +13,59 @@
 
 <body>
     <header>
-        <nav class="menu-bar">
-            <span class="logo"><a href="../index.html">!IMDb</a></span>
-            <ul>
-                <li><a href="../php/filmer.php">Filmer</a></li>
-                <li><a href="../php/serier.php">Serier</a></li>
-                <li><a href="../php/boker.php">Bøker</a></li>
-                <li><a href="../html/registrer.html">Legg til</a></li>
-            </ul>
-        </nav>
+        <?php include("../template/header.php") ?>
     </header>
     <main>
 
         <section class="card">
             <h1 class="heading">Filmer</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sapiente nostrum corrupti illo!
-                Molestiae, mollitia. Beatae enim voluptatem dolorem, eaque laboriosam eveniet similique, numquam non
-                iure veritatis odio? Ad, alias.
-                Commodi, consequuntur delectus, voluptas eligendi fugit, quibusdam vero et quis ducimus minima
-                exercitationem. Consequuntur, assumenda, harum molestiae voluptate iure exercitationem veritatis labore
-                molestias asperiores repellat recusandae iusto deserunt, unde tenetur.
-                Temporibus mollitia dolorem ab eius ducimus quas, illum et rem ea reprehenderit magni totam tempora
-                animi unde architecto veniam dolorum neque sequi culpa. Ducimus consequuntur nam aut fugiat dignissimos
-                odio.
-                Laborum quo ab modi recusandae doloribus libero excepturi sed fugiat tempore dolor magnam eius, possimus
-                soluta? Aliquid autem nostrum officia ex eos temporibus expedita repudiandae cupiditate iusto,
-                doloremque, voluptatem reprehenderit!
-                Porro saepe earum recusandae deserunt repudiandae expedita amet est accusamus praesentium ex consectetur
-                alias magni quasi eveniet obcaecati officia voluptate assumenda eligendi, optio velit minus molestiae.
-                Quidem dicta sint excepturi!</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta modi mollitia, quos natus blanditiis
-                provident deserunt adipisci. Voluptatem perferendis accusamus alias facere dolore quas nulla et ea
-                adipisci. Illo, in.Et ratione incidunt magni pariatur laudantium dolorum dolor veniam iste laboriosam
-                facere culpa temporibus quas, quis nulla, dolorem reiciendis sint at impedit cum hic perspiciatis
-                nostrum maiores inventore! Cumque, enim.</p>
+            </section>
+            <?php
+
+            // Informasjon for å koble til databasen
+            $servername="localhost";
+            $username="haa0110";
+            $password= "haa0";
+            $dbname ="haa0110";
+
+            // Kobler til databasen
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            // Sjekker om tilkobling er ok
+            if ($conn->connect_error) {
+                die("Feil i tilkobling: " . $conn->connect_error);
+            }
+
+            // Henter data ut fra databasen
+
+            echo "<br>";
+
+            $sql = "SELECT bilde_navn, tittel, skaper, utgiver, beskrivelse FROM medie_tabell WHERE medie_type='film'"; // Tilpass
+
+            $resultat = $conn->query($sql);
+
+            if ($resultat->num_rows > 0) {
+                // Utskrift av hver enkelt rad
+                while($rad = $resultat->fetch_assoc()) {
+                    echo 
+                        "<section class='card'>" .
+                        "<div><img src='../img/" . $rad["bilde_navn"] . "' alt='" . $rad["tittel"] . "'></div>" .
+                        "<div><u>Tittel:</u> <br>" . $rad["tittel"] . "<br><br>" .
+                        "<u>Regissør:</u> <br>" . $rad["skaper"] . "<br><br>" .
+                        "<u>Prod.selskap:</u> <br>" . $rad["utgiver"] . "<br><br>" . 
+                        "<u>Beskrivelse:</u> <br>" . $rad["beskrivelse"] . 
+                        "</div></section>"; //ikke linjeskift i denne echo-en!
+                }
+            } else {
+                echo "Databasen er tom!";
+            }
+
+            // Lukker tilkobling
+            $conn->close();
+
+            ?>
+            <section>
+            <br><br><br><br>
         </section>
 
     </main>

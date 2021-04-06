@@ -17,21 +17,13 @@
 
 <body>
     <header>
-        <nav class="menu-bar">
-            <span class="logo"><a href="../index.html">!IMDb</a></span>
-            <ul>
-                <li><a href="../php/filmer.php">Filmer</a></li>
-                <li><a href="../php/serier.php">Serier</a></li>
-                <li><a href="../php/boker.php">Bøker</a></li>
-                <li><a href="../html/registrer.html">Legg til</a></li>
-            </ul>
-        </nav>
+        <?php include("../template/header.php") ?> 
     </header>
     <main>
 
         <section class="card">
             <h1 class="heading">Bøker</h1>
-        </section>
+            </section>
             <?php
 
             // Informasjon for å koble til databasen
@@ -52,7 +44,7 @@
 
             echo "<br>";
 
-            $sql = "SELECT medie_id, tittel, skaper, utgiver, beskrivelse FROM medie_tabell"; // Tilpass
+            $sql = "SELECT bilde_navn, tittel, skaper, utgiver, beskrivelse FROM medie_tabell WHERE medie_type='bok'"; // Tilpass
 
             $resultat = $conn->query($sql);
 
@@ -61,12 +53,12 @@
                 while($rad = $resultat->fetch_assoc()) {
                     echo 
                         "<section class='card'>" .
-                        "<img src='../img/" . $rad["medie_id"] . ".jpeg' alt='" . $rad["tittel"] . "'>" .
-                        "<u>Tittel:</u> <br>" . $rad["tittel"] . "<br><br>" .
+                        "<div><img src='../img/" . $rad["bilde_navn"] . "' alt='" . $rad["tittel"] . "'></div>" .
+                        "<div><u>Tittel:</u> <br>" . $rad["tittel"] . "<br><br>" .
                         "<u>Forfatter:</u> <br>" . $rad["skaper"] . "<br><br>" .
                         "<u>Utgiver:</u> <br>" . $rad["utgiver"] . "<br><br>" . 
                         "<u>Beskrivelse:</u> <br>" . $rad["beskrivelse"] . 
-                        "</section>"; //ikke linjeskift i denne echo-en!
+                        "</div></section>"; //ikke linjeskift i denne echo-en!
                 }
             } else {
                 echo "Databasen er tom!";
@@ -76,7 +68,7 @@
             $conn->close();
 
             ?>
-        <section>
+            <section>
             <br><br><br><br>
         </section>
 
