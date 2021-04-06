@@ -54,11 +54,11 @@
                     echo 
                         "<section class='card'>" .
                         "<div><img src='../img/" . $rad["bilde_navn"] . "' alt='" . $rad["tittel"] . "'></div>" .
-                        "<div><u>Tittel:</u> <br>" . $rad["tittel"] . "<br><br>" .
-                        "<u>Forfatter:</u> <br>" . $rad["skaper"] . "<br><br>" .
-                        "<u>Utgiver:</u> <br>" . $rad["utgiver"] . "<br><br>" . 
-                        "<u>Beskrivelse:</u> <br>" . $rad["beskrivelse"] . 
-                        "</div></section>"; //ikke linjeskift i denne echo-en!
+                        "<div class='card-text' ><span><u>Tittel:</u> <br>" . $rad["tittel"] . "</span>" .
+                        "<span><u>Forfatter:</u> <br>" . $rad["skaper"] . "</span>" .
+                        "<span><u>Utgiver:</u> <br>" . $rad["utgiver"] . "</span>" . 
+                        "<span><u>Beskrivelse:</u> <br>" . $rad["beskrivelse"] . 
+                        "</span></div></section>"; //ikke linjeskift i denne echo-en!
                 }
             } else {
                 echo "Databasen er tom!";
@@ -73,9 +73,6 @@
         </section>
 
     </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>

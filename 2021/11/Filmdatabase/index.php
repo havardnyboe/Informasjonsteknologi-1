@@ -19,81 +19,47 @@
   </header>
     <main>
       <section class="card">
-        <div>
-        <h1 class="heading">Lorem Ipsum</h1>
+        <div id="innledning">
+        <h1 class="heading">Velkommen til !IMDb</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus sapiente nostrum corrupti illo! Molestiae, mollitia.
-          Beatae enim voluptatem dolorem, eaque laboriosam eveniet similique,
-          numquam non iure veritatis odio? Ad, alias. Commodi, consequuntur
-          delectus, voluptas eligendi fugit, quibusdam vero et quis ducimus
-          minima exercitationem. Consequuntur, assumenda, harum molestiae
-          voluptate iure exercitationem veritatis labore molestias asperiores
-          repellat recusandae iusto deserunt, unde tenetur. Temporibus mollitia
-          dolorem ab eius ducimus quas, illum et rem ea reprehenderit magni
-          totam tempora animi unde architecto veniam dolorum neque sequi culpa.
-          Ducimus consequuntur nam aut fugiat dignissimos odio. Laborum quo ab
-          modi recusandae doloribus libero excepturi sed fugiat tempore dolor
-          magnam eius, possimus soluta? Aliquid autem nostrum officia ex eos
-          temporibus expedita repudiandae cupiditate iusto, doloremque,
-          voluptatem reprehenderit! Porro saepe earum recusandae deserunt
-          repudiandae expedita amet est accusamus praesentium ex consectetur
-          alias magni quasi eveniet obcaecati officia voluptate assumenda
-          eligendi, optio velit minus molestiae. Quidem dicta sint excepturi!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta modi
-          mollitia, quos natus blanditiis provident deserunt adipisci.
-          Voluptatem perferendis accusamus alias facere dolore quas nulla et ea
-          adipisci. Illo, in.Et ratione incidunt magni pariatur laudantium
-          dolorum dolor veniam iste laboriosam facere culpa temporibus quas,
-          quis nulla, dolorem reiciendis sint at impedit cum hic perspiciatis
-          nostrum maiores inventore! Cumque, enim.
+          Her kan du legge til dine favoritt bøker, filmer og tv-serier. Fyll inn informasjon på 'Legg til' siden, last opp et bilde av boken, filmen eller serien og send inn skjemaet. Du kan finne de forskjellige mediene under de ulike kategoriene, eller finne et tilfeldig valgt medie fra utvalget under.
         </p>
         </div>
       </section>
+      <div class="randomFrontPage">
+      <?php
+            // Informasjon for å koble til databasen
+            $servername="localhost";
+            $username="haa0110";
+            $password= "haa0";
+            $dbname ="haa0110";
+            // Kobler til databasen
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Sjekker om tilkobling er ok
+            if ($conn->connect_error) {
+                die("Feil i tilkobling: " . $conn->connect_error);
+            }
+            // Henter data ut fra databasen
+            $sql = "SELECT tittel, bilde_navn FROM medie_tabell ORDER BY RAND() LIMIT 6"; // Henter en tilfeldig rad fra databasen
+            $resultat = $conn->query($sql);
+            if ($resultat->num_rows > 0) {
+              while ($rad = $resultat->fetch_assoc()) {
+                echo 
+                "<section id='frontPage'>" .
+                "<img src='img/" . $rad["bilde_navn"] . "' alt='" . $rad["tittel"] . "'><br><br>" .
+                "<em>" . $rad["tittel"] . "</em>" .
+                "</section>"; //ikke linjeskift i denne echo-en!
+              }
+            } else {
+                echo "Databasen er tom!";
+            }
+            // Lukker tilkobling
+            $conn->close();
 
-      <section class="card">
-        <div>
-        <h1 class="heading">Lorem Ipsum 2</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus sapiente nostrum corrupti illo! Molestiae, mollitia.
-          Beatae enim voluptatem dolorem, eaque laboriosam eveniet similique,
-          numquam non iure veritatis odio? Ad, alias. Commodi, consequuntur
-          delectus, voluptas eligendi fugit, quibusdam vero et quis ducimus
-          minima exercitationem. Consequuntur, assumenda, harum molestiae
-          voluptate iure exercitationem veritatis labore molestias asperiores
-          repellat recusandae iusto deserunt, unde tenetur. Temporibus mollitia
-          dolorem ab eius ducimus quas, illum et rem ea reprehenderit magni
-          totam tempora animi unde architecto veniam dolorum neque sequi culpa.
-          Ducimus consequuntur nam aut fugiat dignissimos odio. Laborum quo ab
-          modi recusandae doloribus libero excepturi sed fugiat tempore dolor
-          magnam eius, possimus soluta? Aliquid autem nostrum officia ex eos
-          temporibus expedita repudiandae cupiditate iusto, doloremque,
-          voluptatem reprehenderit! Porro saepe earum recusandae deserunt
-          repudiandae expedita amet est accusamus praesentium ex consectetur
-          alias magni quasi eveniet obcaecati officia voluptate assumenda
-          eligendi, optio velit minus molestiae. Quidem dicta sint excepturi!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta modi
-          mollitia, quos natus blanditiis provident deserunt adipisci.
-          Voluptatem perferendis accusamus alias facere dolore quas nulla et ea
-          adipisci. Illo, in.Et ratione incidunt magni pariatur laudantium
-          dolorum dolor veniam iste laboriosam facere culpa temporibus quas,
-          quis nulla, dolorem reiciendis sint at impedit cum hic perspiciatis
-          nostrum maiores inventore! Cumque, enim.
-        </p>
-        <br /><br /><br />
-        </div>
-      </section>
+      ?>
+      </div>
+      
     </main>
-    <footer>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore libero
-      dolorum quibusdam sit optio? Officia, quidem dolor nemo culpa, nostrum
-      dolorem dolore sed laboriosam aliquid maxime suscipit perspiciatis
-      adipisci cumque?
-    </footer>
   </body>
+
 </html>
