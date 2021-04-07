@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="nb">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap&family=Passion+One:wght@700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap&family=Passion+One:wght@700&display=swap"
+        rel="stylesheet" />
     <title>Filmdatabase - Hjem</title>
-    </head>
+</head>
 
-    <body>
+<body>
     <header>
-        <?php include("../template/header.php") ?> 
+        <?php include("../template/header.php") ?>
     </header>
     <main>
         <section class="card">
-        <?php
+            <?php
 
         // Legger inn verdier fra skjema i variabler
         $medie = $_POST["medie"];
@@ -87,6 +87,6 @@
         ?>
         </section>
     </main>
-  </body>
-  
+</body>
+
 </html>
