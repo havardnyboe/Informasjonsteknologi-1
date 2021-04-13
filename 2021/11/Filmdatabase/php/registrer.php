@@ -50,8 +50,8 @@
                     <input type="file" id="bilde" name="bilde"><br><br>
 
                     <label for="beskrivelse">Beskrivelse:</label><br>
-                    <textarea id="beskrivelse" name="beskrivelse" rows="3" cols="30"></textarea><br>NB! Unngå å bruke
-                    apostrof ' når du fyller inn skjemaet!<br><br>
+                    <textarea id="beskrivelse" name="beskrivelse" rows="3" cols="30"></textarea>
+                    <br><br>
 
                     <input type="submit" value="Submit">
                     <input type="reset" value="Reset"><br><br>
