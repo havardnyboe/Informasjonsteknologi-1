@@ -10,7 +10,7 @@
 
 <body style="background-color: teal;">
     <h1 style="text-align: center; font-size: 100px;">Pong</h1>
-    <?php header( "refresh:0.8; url=index.php" ); ?>
+    <?php header( "refresh:1; url=ping.php" ); ?>
 </body>
 
 </html>
