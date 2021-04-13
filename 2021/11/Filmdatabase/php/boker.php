@@ -7,24 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap&family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap&family=Passion+One:wght@700&display=swap"
+        rel="stylesheet">
     <title>Filmdatabase - Bøker</title>
 </head>
 
 <script>
-    
+
 </script>
 
 <body>
     <header>
-        <?php include("../template/header.php") ?> 
+        <?php include("../template/header.php") ?>
     </header>
     <main>
 
         <section class="card">
             <h1 class="heading">Bøker</h1>
-            </section>
-            <?php
+        </section>
+        <?php
 
             // Informasjon for å koble til databasen
             $servername="localhost";
@@ -68,7 +70,7 @@
             $conn->close();
 
             ?>
-            <section>
+        <section>
             <br><br><br><br>
         </section>
 
