@@ -52,7 +52,7 @@
                     echo 
                         "<section class='card'>" .
                         "<div><img src='../img/" . $rad["bilde_navn"] . "' alt='" . $rad["tittel"] . "'></div>" .
-                        "<div class='card-text' ><span><u>Tittel:</u> <br>" . $rad["tittel"] . "</span>" .
+                        "<div class='card-text' ><h2 style='width: 100%; margin-bottom: 6px;'>" . $rad["tittel"] . "</h2>" .
                         "<span><u>Regissør:</u> <br>" . $rad["skaper"] . "</span>" .
                         "<span><u>Prod.selskap:</u> <br>" . $rad["utgiver"] . "</span>" . 
                         "<span><u>Beskrivelse:</u> <br>" . $rad["beskrivelse"] . 
