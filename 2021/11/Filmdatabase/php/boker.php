@@ -75,6 +75,9 @@
         </section>
 
     </main>
+    <footer>
+        <?php include("../template/footer.php") ?>
+    </footer>
 </body>
 
 </html>

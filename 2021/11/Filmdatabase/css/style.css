@@ -74,7 +74,6 @@ section.card {
 }
 
 section.card img {
-  /* float: left; */
   width: 250px;
   padding-right: 30px;
 }
@@ -121,8 +120,18 @@ section.card div.card-text span {
   padding-top: 2rem;
 }
 
-p {
+.card p {
   margin: 0.5rem 0;
+}
+
+footer {
+  background-color: #090909;
+  display: flex;
+  color: white;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
