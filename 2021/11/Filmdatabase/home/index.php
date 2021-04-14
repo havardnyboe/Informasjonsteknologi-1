@@ -2,20 +2,45 @@
 <html lang="nb">
 
 <head>
+    <!-- 
+------------------------------------------------
+                             /`*_
+                            /    `-_
+                 _.,  _.   /        `-_
+             _,-` __`-_ `-/            `-_
+          ,-  .,~`  /  `-/               .`
+         :_ -`     "    /`-@             /
+                  /`\  ;    `-_         /
+               |-`.. `-\  |    `-_     / `-_
+            _-`  `_.`\  `-_ |;\   @-_ / `-_/
+           -  .__.,,;___o  `-_|      /`-__-_
+          - 1`-_ .~--` _~` o   `-_   ;   `   -
+        .`Q W 2 `-_ `,`. /- - o   `-_\  `     `
+       - A S  E  3 `-_  . / .|   _ ..`-_;     :
+    _-` Z X  D F R T 4`-_  ;  ;   `_ `_-`.-_,`
+ .-`--_     C   G   Y  5 `-_ i    _-`    ;
+:  `-_//`-_   V  H J U I 6  `-_.-`       *
+-_    `-_  `-_    B N K L O 7 -          :
+  `-_    `-_  `-_    M . ; P .`      es  ;
+     `-_    `-_  `-_     ,  -           _`
+        `-_    `-_ /     -`         _-`
+           `-_    `-_/-_`        _-`
+              `-_    `-.      _-`
+                 `-_   .   .-`
+                    `-_:_-`  
+                       `
+------------------------------------------------
+    -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap&family=Passion+One:wght@700&display=swap"
-        rel="stylesheet" />
+    <?php include("../template/link.php") ?>
     <title>Filmdatabase - Hjem</title>
 </head>
 
 <body>
     <header>
-        <?php include("template/header.php") ?>
+        <?php include("../template/header.php") ?>
     </header>
     <main>
         <section class="card">
@@ -24,7 +49,8 @@
                 <p>
                     Her kan du legge til dine favoritt bøker, filmer og tv-serier. Fyll inn informasjon på 'Legg til'
                     siden, last opp et bilde av boken, filmen eller serien og send inn skjemaet. Du kan finne de
-                    forskjellige mediene under de ulike kategoriene, eller finne et tilfeldig valgt medie fra utvalget
+                    forskjellige mediene under de ulike kategoriene i menyen, søke i søkefeltet, eller finne et
+                    tilfeldig valgt medie fra utvalget
                     under.
                 </p>
             </div>
@@ -49,7 +75,7 @@
               while ($rad = $resultat->fetch_assoc()) {
                 echo 
                 "<section id='frontPage'>" .
-                "<img src='img/" . $rad["bilde_navn"] . "' alt='" . $rad["tittel"] . "'><br><br>" .
+                "<img src='../img/" . $rad["bilde_navn"] . "' alt='" . $rad["tittel"] . "'><br><br>" .
                 "<em>" . $rad["tittel"] . "</em>" .
                 "</section>"; //ikke linjeskift i denne echo-en!
               }
@@ -63,7 +89,7 @@
         </div>
 
     </main>
-    <?php include("template/footer.php") ?>
+    <?php include("../template/footer.php") ?>
 </body>
 
 </html>
