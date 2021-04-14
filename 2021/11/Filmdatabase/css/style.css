@@ -8,30 +8,39 @@ body {
   background-color: #e3e2dd;
 }
 
+/* LOGO */
 span.logo a {
-  color: gold;
+  color: black;
+  background-color: #f5c518;
+  border-radius: 8px;
   text-decoration: none;
-  padding: 1.7rem 2rem;
-  font-size: 2.4rem;
-  font-family: "Roboto", sans-serif;
-
+  padding: 0.1rem 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-family: "Titillium Web", sans-serif;
   font-weight: bolder;
 }
 
+/* HEADER */
 header {
   background-color: #121212;
+  box-shadow: 0px 4px 10px grey;
+  position: sticky;
+  z-index: 1;
 }
 
+/* NAV */
 nav.menu-bar {
   margin: auto;
   display: flex;
   color: white;
-  font-family: "Roboto", sans-serif;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 5rem;
   width: 1000px;
+  overflow: hidden;
 }
 
 nav.menu-bar ul {
@@ -39,22 +48,74 @@ nav.menu-bar ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 572px;
   height: 100%;
   list-style: none;
-  overflow: hidden;
 }
 
 nav.menu-bar ul li a {
   display: inline-block;
   color: inherit;
   text-decoration: none;
-  padding: 10rem 3rem;
+  padding: calc(2.5rem - 10px) 3rem;
 }
 
 nav.menu-bar ul li a:hover {
   background-color: #333;
 }
 
+/* MENY OG SØK I NAV */
+.container {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1.5rem 0;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change {
+  margin-left: 8.5rem;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 8px);
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -7.5px);
+}
+
+.searchForm {
+  width: 50%;
+}
+
+.searchBox {
+  width: 100%;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+}
+
+#searchResult {
+  width: 75%;
+  text-align: left;
+}
+
+/* MAIN */
 main {
   margin: auto;
   display: flex;
@@ -78,6 +139,19 @@ section.card img {
   padding-right: 30px;
 }
 
+section.card div.card-text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+section.card div.card-text span {
+  padding-right: 30px;
+  padding-bottom: 12px;
+}
+
+/* FORSIDE */
 section#frontPage {
   margin: auto;
   display: flex;
@@ -102,20 +176,8 @@ div.randomFrontPage em {
   width: 250px;
 }
 
-section.card div.card-text {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-}
-
-section.card div.card-text span {
-  padding-right: 30px;
-  padding-bottom: 12px;
-}
-
+/* ANDRE ELEMENTER */
 .heading {
-  font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   padding-top: 2rem;
 }
@@ -124,6 +186,22 @@ section.card div.card-text span {
   margin: 0.5rem 0;
 }
 
+/* FOOTER */
+footer {
+  background-color: #000;
+  display: flex;
+  color: whitesmoke;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer a {
+  color: #f5c518;
+}
+
+/* MOBIL */
 @media only screen and (max-width: 1000px) {
   nav.menu-bar {
     height: max-content;
@@ -139,9 +217,7 @@ section.card div.card-text span {
   }
 
   nav.menu-bar ul li a {
-    padding: 0;
-    width: 150px;
-    height: 50px;
+    margin-bottom: 10px;
   }
 
   nav.menu-bar ul li a:hover {
@@ -150,6 +226,10 @@ section.card div.card-text span {
 
   span.logo a {
     display: inherit;
+  }
+
+  #searchResult {
+    width: auto;
   }
 
   main {
@@ -176,5 +256,13 @@ section.card div.card-text span {
 
   section.card div.card-text {
     padding-left: 20px;
+  }
+
+  .change {
+    margin-left: 0;
+  }
+
+  .searchForm {
+    width: 75%;
   }
 }
