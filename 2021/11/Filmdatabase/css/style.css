@@ -124,16 +124,6 @@ section.card div.card-text span {
   margin: 0.5rem 0;
 }
 
-footer {
-  background-color: #090909;
-  display: flex;
-  color: white;
-  height: 8rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 @media only screen and (max-width: 1000px) {
   nav.menu-bar {
     height: max-content;
