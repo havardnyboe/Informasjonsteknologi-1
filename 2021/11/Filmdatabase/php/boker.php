@@ -42,7 +42,7 @@
 
             echo "<br>";
 
-            $sql = "SELECT bilde_navn, tittel, skaper, utgiver, beskrivelse FROM medie_tabell WHERE medie_type='bok'"; // Tilpass
+            $sql = "SELECT bilde_navn, tittel, skaper, utgiver, beskrivelse FROM medie_tabell WHERE medie_type='bok' ORDER BY tittel"; // Tilpass
 
             $resultat = $conn->query($sql);
 

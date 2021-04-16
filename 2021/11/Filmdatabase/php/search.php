@@ -32,7 +32,7 @@
             
             $search = mysqli_real_escape_string($conn, $_POST['searchBox']); // Forhindrer at søket inneholder sql-kode
             // Lager spørring som sjekker om søket liker noe i databasen
-            $sql = ("SELECT * FROM medie_tabell WHERE tittel LIKE '%$search%' OR skaper LIKE '%$search%' OR utgiver LIKE '%$search%' OR medie_type LIKE '%$search%'");
+            $sql = ("SELECT * FROM medie_tabell WHERE tittel LIKE '%$search%' OR skaper LIKE '%$search%' OR utgiver LIKE '%$search%' OR medie_type LIKE '%$search%' ORDER BY tittel");
             
             $resultat = $conn->query($sql);
             $queryResultat = mysqli_num_rows($resultat);
