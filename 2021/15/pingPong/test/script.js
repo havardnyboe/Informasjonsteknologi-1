@@ -1,7 +1,7 @@
 function main() {
-    if (localStorage.getItem('counter')) {
+    if (sessionStorage.getItem('counter')) {
         let page = "pong";
-        let counter = Number(localStorage.getItem('counter'))
+        let counter = Number(sessionStorage.getItem('counter'))
 
         counter++;
         console.log(counter)
@@ -14,18 +14,18 @@ function main() {
             console.log(page);
         }
 
-        localStorage.setItem('counter', counter)
+        sessionStorage.setItem('counter', counter)
 
         if (counter >= 10) {
             page = "pung";
             console.log(page);
-            localStorage.setItem('counter', 0)
+            sessionStorage.setItem('counter', 0)
         }
 
         console.log(page);
         window.location.href = `${page}.html`
     } else {
-        localStorage.setItem('counter', 0)
+        sessionStorage.setItem('counter', 0)
         window.location.reload()
     }
 }
