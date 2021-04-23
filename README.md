@@ -13,3 +13,4 @@ Oppgaver og prøver fra IT1
 - [PVSbibliotek](2020/43-46/PVSbibliotek/)
 - [Databasekoblingsting](2021/7/Databasekoblingsting/)
 - [Filmdatabase](2021/11/Filmdatabase/)
+- [Etisk Dilemma](2021/16/Etisk%20dilemma%20-%20Synne,%20Håvard,%20Julian,%20Emma/)
