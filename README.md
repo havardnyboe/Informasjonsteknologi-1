@@ -1,7 +1,9 @@
 # Informasjonsteknologi 1
-Oppgaver og prøver fra IT1 
- 
+
+Oppgaver og prøver fra IT1
+
 ## Innhold
+
 - [Hello World!](2020/34/Hello%20World/)
 - [Timeplan](2020/35/Timeplan/)
 - [Universell Utforming](2020/35/Universell%20Utforming/)
