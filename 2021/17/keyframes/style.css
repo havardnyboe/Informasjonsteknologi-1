@@ -1,0 +1,97 @@
+body {
+    background-color: black;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.flex-item {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid whitesmoke;
+}
+
+/* #region sirkler */
+
+.sirkel1 {
+    animation: skaler 4s infinite ease-out;
+    animation-delay: 0s;
+}
+
+.sirkel2 {
+    animation: skaler 4s infinite ease-out;
+    animation-delay: 1s;
+}
+
+.sirkel3 {
+    animation: skaler 4s infinite ease-out;
+    animation-delay: 2s;
+}
+
+.sirkel4 {
+    animation: skaler 4s infinite ease-out;
+    animation-delay: 3s;
+}
+
+.sirkel5 {
+    animation: skaler 4s infinite ease-out;
+    animation-delay: 4s;
+}
+
+/* #endregion */
+
+.popkorn {
+    height: 150px;
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 20%;
+    border: 4px solid blue;
+    animation: snurr 1.5s infinite linear;
+}
+
+.firkant {
+    width: 200px;
+    height: 200px;
+    border-radius: 0%;
+    background: red;
+    position: relative;
+    animation: beveg 5s infinite;
+}
+
+@keyframes snurr {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes skaler {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(50);
+    }
+}
+
+@keyframes beveg {
+    0% {
+        top: 0px;
+        background: red;
+        width: 100px;
+    }
+
+    100% {
+        top: 200px;
+        background: yellow;
+        width: 300px;
+    }
+}
